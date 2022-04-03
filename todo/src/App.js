@@ -18,6 +18,7 @@ const App = () => {
     },
     [todo],
   );
+
   const onToggle = useCallback(
     (id) => {
       setTodo(

@@ -20,7 +20,7 @@ const ColorProvider = ({ children }) => {
     <ColorContext.Provider value={value}>{children}</ColorContext.Provider>
   );
 };
-// const ColorConsumer = ColorContext.Consumer
+//const ColorConsumer = ColorContext.Consumer
 const { Consumer: ColorConsumer } = ColorContext;
 
 export { ColorProvider, ColorConsumer };

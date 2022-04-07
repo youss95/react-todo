@@ -1,12 +1,17 @@
-import React from "react";
+import React, { createContext } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
+import { createStore } from "redux";
+import rootReducer from "./modules";
+import { Provider } from "react-redux";
+const store = createStore(rootReducer);
 
+//prover로 감싸서 redux 적용하기
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById("root")
 );
 
